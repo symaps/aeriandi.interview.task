@@ -26,17 +26,24 @@
         for (i = 0; i < selectBallCount; ++i) {
             pickBall();
         }
-        
-
     };
+
+    var selectColour = function (ballNum) {
+        if (ballNum < 1 || ballNum > 41) {// I have included the facility to select the range of balls however the spec does not currently support this. 
+            // if the range of input balls is changed this should be changed.
+            console.log("selected ball out of range:" + ballNum);
+        }
+        //1-9 grey, 10-19 blue, 20-29, pink, 30-39 green, 40-49 yellow.
+        return ["grey", "blue", "pink", "green", "yellow"][Math.floor(ballNum / 10)];
+    }
 
     var displayNumbers = function () {
         var i = 0;
         results.empty();
         for (i = 0; i < totalBallCount; ++i) {
             if (ballBank[i].selected) {
-             
-                results.append("<span class='ball'>" + ballBank[i].number + "<span>");
+                var colour = selectColour(ballBank[i].number);
+                results.append("<span class='ball " + colour + "'>" + ballBank[i].number + "<span>");
             }
         }
     };

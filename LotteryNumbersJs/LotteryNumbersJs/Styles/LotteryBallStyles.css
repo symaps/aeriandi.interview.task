@@ -1,4 +1,8 @@
-﻿
+﻿/* this style sheet to demonstrate function it would really not be suitable for client release.
+    No styling has been given to the page at all and the (really ugly default styles are in place as I think this 
+    is for a developer audience.)
+*/
+
 body {
    
 
@@ -6,4 +10,27 @@ body {
 
 span.ball {
     margin: 0px 10px 0px 10px;
+}
+/* I think using backgoung colours like this is really ugly but just to have a quick solution to colouring. 
+    it could be much more attractive to put a background image behind that looks like a ball of the approprate colour.
+    Like a pool ball for example.
+    
+    My choice of actual colour implemntation is attrocious and it is something that I would address before releasing in a normal 
+    environment but I expect this is not what is being looked for at this stage. 
+
+*/
+span.pink {
+    background-color: pink;
+}
+span.grey {
+    background-color: grey;
+}
+span.blue {
+    background-color: blue;
+}
+span.green {
+    background-color: green;
+}
+span.yellow {
+    background-color: yellow;
 }
