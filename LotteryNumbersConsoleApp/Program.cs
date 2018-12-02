@@ -11,7 +11,7 @@ namespace LotteryNumbersConsoleApp
         static void Main(string[] args)
         {
             LotteryNumGenerator numGen= new LotteryNumGenerator();
-           
+            numGen.GenerateNums(6);
 
         }
     }
