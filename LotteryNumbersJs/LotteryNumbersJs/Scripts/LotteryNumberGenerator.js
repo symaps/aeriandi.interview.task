@@ -9,6 +9,7 @@
 
     var resetBallBank = function () {
         var i = 0;
+        ballBank = [];
         for (i = 0; i < totalBallCount; ++i) {
             ballBank.push({ number: i + 1, selected: false });
         }
@@ -35,7 +36,7 @@
         for (i = 0; i < totalBallCount; ++i) {
             if (ballBank[i].selected) {
              
-                results.append("<span>" + ballBank[i].number + "<span>");
+                results.append("<span class='ball'>" + ballBank[i].number + "<span>");
             }
         }
     };
