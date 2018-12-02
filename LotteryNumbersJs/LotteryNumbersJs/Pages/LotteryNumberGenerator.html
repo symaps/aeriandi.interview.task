@@ -7,13 +7,14 @@
 <body>
 <H1>Aeriandi Interview Task (by Paul Adams)</H1>
 <H2>Lottery Number Generator</H2>
+    <span id="generateBtn"><a id="link" href="#">Generate numbers</a></span>
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
    
 <script type ="text/javascript" src="../Scripts/LotteryNumberGenerator.js" ></script>
 <script >
     $(document).ready(function() {
         var lotteryNumberGenerator = numberGenerator();
-        lotteryNumberGenerator.init();
+        lotteryNumberGenerator.init($(generateBtn));
     });
 </script>
 </body>

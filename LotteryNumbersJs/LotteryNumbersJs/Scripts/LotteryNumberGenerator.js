@@ -9,9 +9,13 @@
         }
     };
     return {
-        init: function () {
+        init: function (btn) {
             
-            _resetBallBank();
+            btn.on("click", function () {
+                var i = 0;
+                _resetBallBank();
+                alert("click");
+            });
         }
 
     };
