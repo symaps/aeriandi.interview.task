@@ -1,9 +1,14 @@
-﻿var numberGenerator = function() {
+﻿var numberGenerator = function () {
+    "use strict";
+
     var ballBank = []; // all the available balls. Balls can be in one of two states not selected or selected. This is analogus to being inside the ball machine or on the display rack.
+    var results = null;
+    var totalBallCount = 49;
+    var selectBallCount =6;
+    ballBank = [];
+
     var resetBallBank = function () {
         var i = 0;
-        var totalBallCount = 49;
-        ballBank = [];
         for (i = 0; i < totalBallCount; ++i) {
             ballBank.push({ number: i + 1, selected: false });
         }
@@ -23,13 +28,26 @@
         
 
     };
+
+    var displayNumbers = function () {
+        var i = 0;
+        results.empty();
+        for (i = 0; i < totalBallCount; ++i) {
+            if (ballBank[i].selected) {
+             
+                results.append("<span>" + ballBank[i].number + "<span>");
+            }
+        }
+    };
     return {
-        init: function (btn_, selectBallCount_) {
+        init: function (btn_, selectBallCount_, results_) {
             selectBallCount = selectBallCount_;
+            results = results_;
             btn_.on("click", function () {
                 var i = 0;
                 resetBallBank();
                 generateNumbers();
+                displayNumbers();
             });
         }
 
