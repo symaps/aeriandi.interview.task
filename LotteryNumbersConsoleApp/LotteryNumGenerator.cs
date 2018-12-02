@@ -6,13 +6,7 @@ using System.Threading.Tasks;
 
 namespace LotteryNumbersConsoleApp
 {
-    class Program
+    class LotteryNumGenerator
     {
-        static void Main(string[] args)
-        {
-            LotteryNumGenerator numGen= new LotteryNumGenerator();
-           
-
-        }
     }
 }
