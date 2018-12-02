@@ -26,7 +26,8 @@ namespace LotteryNumbersConsoleApp
             }
         }
 
-
+        public IEnumerable<int> GeneratedNumbers => _balls.Where( b=>b.Selected ).Select( b=>b.Number );
+        
         public void GenerateNums(int generateCount)
         {
             Random rnd = new Random();
@@ -42,7 +43,5 @@ namespace LotteryNumbersConsoleApp
             }
 
         }
-
-        
     }
 }
