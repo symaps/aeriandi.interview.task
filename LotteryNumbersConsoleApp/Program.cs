@@ -43,9 +43,9 @@ namespace LotteryNumbersConsoleApp
                 return ConsoleColor.Gray;
             if (num <= 19)
                 return ConsoleColor.Blue;
-            if (num < 29)
+            if (num <= 29)
                 return ConsoleColor.Magenta; // can't do pink in a console app
-            if (num < 39)
+            if (num <= 39)
                 return ConsoleColor.Green;
             return ConsoleColor.Yellow;
         }
